@@ -33,6 +33,12 @@ class TaskManager:
         """
         pass
 
+    def dump_tasks_to_file(tasks, filename):
+        with open(filename, 'w') as file:
+            for task in tasks:
+                file.write(task + '\n')
+        print("Tasks dumped successfully to", filename)
+
 def main():
     task_manager = TaskManager()
 
